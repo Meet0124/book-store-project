@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import BookCard from '../books/BookCard';
 
 function TopSellers() {
     const[books,setBooks]=useState([])  //empty array sincebooks.json is an array of object
@@ -36,7 +37,7 @@ function TopSellers() {
 
       {
         filteredBooks.map((book,index)=>(
-            <div>{book.title}</div>
+            <BookCard key={index} book={book}/>
         ))
       }
     </div>
