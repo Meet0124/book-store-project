@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App"
+import Home from "../pages/Home/Home";
 
 const router = createBrowserRouter([
     {
@@ -7,7 +8,7 @@ const router = createBrowserRouter([
         element: <App/>,
         children: [{           //path: "/": Matches the root URL (/). element: <App />: Renders the App component as the layout  children: Nested routes that render inside <App>.
             path: "/",
-            element: <h1>Home</h1>,
+            element: <Home/>,
         },
         {
             path: "/orders",
